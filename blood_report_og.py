@@ -11,6 +11,8 @@ from PIL import Image
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
+import pytesseract
+
 
 # Download necessary NLTK data
 try:
@@ -1295,7 +1297,7 @@ def main_cli():
         parser.print_help()
 
 def main():
-    st.set_page_config(page_title="Blood Report Analyzer", layout="wide")
+    # st.set_page_config(page_title="Blood Report Analyzer", layout="wide")
     
     st.title("Blood Report Analyzer and Summarizer")
     st.write("Upload your blood test report (PDF or image) to get a comprehensive summary and analysis")
@@ -1303,7 +1305,7 @@ def main():
     uploaded_file = st.file_uploader("Choose a blood report file", type=["pdf", "png", "jpg", "jpeg"])
     
     text = ""
-    
+
     if uploaded_file is not None:
         st.success(f"File uploaded: {uploaded_file.name}")
         
