@@ -1,2 +1,4 @@
-curl https://sh.rustup.rs -sSf | sh -s -- -y
+wget https://sh.rustup.rs -O rustup.sh
+chmod +x rustup.sh
+./rustup.sh -y
 export PATH="$HOME/.cargo/bin:$PATH"
