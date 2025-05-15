@@ -1,4 +1,3 @@
-curl -sSf -o rustup.sh https://sh.rustup.rs
-chmod +x rustup.sh
-./rustup.sh -y
-export PATH="$HOME/.cargo/bin:$PATH"
+rustc
+cargo
+poppler-utils
